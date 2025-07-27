@@ -1,0 +1,9 @@
+tensorflow
+numpy
+matplotlib
+flask
+pillow
+pyttsx3
+speechrecognition
+pyaudio
+tk
