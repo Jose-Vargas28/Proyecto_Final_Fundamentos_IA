@@ -1,0 +1,100 @@
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-list li {
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-list li:hover {
+  color: #d0e2ff;
+}
+
+/* Main content */
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* Footer */
+.app-footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .nav-list {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Animaciones para iconos y botones */
+.spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hover para botones consistentes */
+.btn-classify:hover:not(:disabled),
+.btn-tts:hover,
+.btn-voice:hover {
+  background-color: #0056b3;
+  transition: background-color 0.3s ease;
+}
+
+.file-input-label:hover {
+  background-color: #0056b3;
+}
